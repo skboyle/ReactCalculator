@@ -5,7 +5,7 @@
   --red: #ff8095;
   --yellow: #ffd085;
   --text-color: #ffffff;
-  --error-color: #636363;
+  --text-color-dark: #636363;
   --white: #e8e8e8;
   --screen-background: #636363;
   --main-background: #f5f1ec;
@@ -102,7 +102,7 @@ button.special.sign {
   flex-direction: row;
   margin-bottom: 0.5rem;
   font-size: 1.5rem;
-  color: var(--white);
+  color: var(--text-color-dark);
   font-weight: 900;
   overflow: hidden;
   word-wrap: break-word;
@@ -135,7 +135,7 @@ button.special.sign {
 }
 
 .calc-error {
-  color: var(--error-color);
+  color: var(--text-color-dark);
   letter-spacing: 0.1rem;
   overflow: hidden;
   word-wrap: break-word;
