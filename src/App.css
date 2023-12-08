@@ -1,13 +1,14 @@
 
 :root {
-  --blue: #0073ff;
-  --green: #32CD32;
-  --red: #cd3232;
-  --text-color: #cbe1ff;
-  --white: #ffffff;
-  --black--first: #363e4d;
-  --black--second: #242933;
-  --main-black: #161a20;
+  --blue: #68c6db;
+  --green: #6be08e ;
+  --red: #ff8095;
+  --yellow: #ffd085;
+  --text-color: #ffffff;
+  --error-color: #636363;
+  --white: #e8e8e8;
+  --screen-background: #636363;
+  --main-background: #f5f1ec;
 }
 
 * {
@@ -56,7 +57,7 @@ body::-webkit-scrollbar {
 .container .calculator {
   height: 90vh;
   width: 330px;
-  background-color: var(--main-black);
+  background-color: var(--main-background);
   border-radius: 0.5rem;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
@@ -64,7 +65,7 @@ body::-webkit-scrollbar {
 /* global button style */
 button {
   border: unset;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: unset;
   color: var(--text-color);
   cursor: pointer;
@@ -88,7 +89,6 @@ button.special.sign {
 
 
 .calc-screen {
-  border-radius: 25px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -101,7 +101,7 @@ button.special.sign {
   align-items: center;
   flex-direction: row;
   margin-bottom: 0.5rem;
-  font-size: 3rem;
+  font-size: 1.5rem;
   color: var(--white);
   font-weight: 900;
   overflow: hidden;
@@ -110,14 +110,14 @@ button.special.sign {
 }
 
 .calc-compute {
-  background-color: var(--black--first);
+  border-radius: 10px;
+  background-color: var(--screen-background);
   padding: 0.4rem 1rem;
-  /* display: grid;
-  grid-template-columns: minmax(0px, 50px) repeat(2, 1fr); */
   font-size: 1.8rem;
   font-weight: 300;
   transition: all 0.5s linear;
   overflow: hidden;
+  margin: 1rem;
 }
 
 .calc-compute span {
@@ -135,7 +135,7 @@ button.special.sign {
 }
 
 .calc-error {
-  color: var(--text-color);
+  color: var(--error-color);
   letter-spacing: 0.1rem;
   overflow: hidden;
   word-wrap: break-word;
@@ -144,7 +144,7 @@ button.special.sign {
 
 .calc-compute > button {
   background-color: unset;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: var(--text-color);
 }
 
@@ -162,12 +162,12 @@ button.special.sign {
 .calc-grid > button {
   cursor: pointer;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 500;
   transition: all 0.5s linear;
   text-transform: uppercase;
-  background-color: var(--black--second);
-  border: 3px solid var(--main-black);
+  background-color: var(--yellow);
+  border: 3px solid var(--main-background);
 }
 
 .calc-grid > button:hover {
@@ -175,11 +175,11 @@ button.special.sign {
 }
 
 .calc-grid > button.top-btn {
-  background-color: var(--black--first);
+  background-color: var(--screen-background);
 }
 
 .calc-grid > button.normal {
-  background-color: var(--black--second);
+  background-color: var(--yellow);
 }
 
 .calc-grid > button.special {

@@ -187,10 +187,11 @@ function Calculator() {
           <button className="normal" value="3" onClick={handleClick}>3</button>
           <button className="special" value="+" onClick={handleClick}>+</button>
 
-          <button className='normal calc-reverse' value="rv" onClick={handleDelete}>⬅</button>
+          <button className="clear" value="ac" onClick={handleClear}>ac</button>
           <button className="normal" value="0" onClick={handleClick}>0</button>
           <button className="enter" value="=" onClick={handleEnter}>=</button>
-          <button className="clear" value="ac" onClick={handleClear}>ac</button>
+          <button className='normal special calc-reverse' value="rv" onClick={handleDelete}>⬅</button>
+
         </div>
       </div>
     </div >
