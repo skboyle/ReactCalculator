@@ -17,7 +17,7 @@ function Calculator() {
   };
 
   const handleDelete = () => {
-    setEquation((prevEquation) => prevEquation.slice(0, -1)); // Remove the last character
+    setEquation((prevEquation) => prevEquation.slice(0, -1)); 
   };
 
   const handleEnter = () => {
@@ -41,9 +41,7 @@ function Calculator() {
 
   const isValidExpression = (expression) => {
     try {
-      // Attempt to create a function with the expression (this checks for valid syntax)
-      new Function('return ' + expression); // eslint-disable-line no-new-func
-      // Use additional checks for matching parentheses
+      new Function('return ' + expression); 
       return hasMatchingParentheses(expression);
     } catch (error) {
       return false;
@@ -51,7 +49,6 @@ function Calculator() {
   };
 
   const hasMatchingParentheses = (expression) => {
-    // Implement a simple check for matching parentheses
     const stack = [];
 
     for (const char of expression) {
@@ -59,12 +56,12 @@ function Calculator() {
         stack.push('(');
       } else if (char === ')') {
         if (stack.pop() !== '(') {
-          return false; // Unmatched closing parenthesis
+          return false;
         }
       }
     }
 
-    return stack.length === 0; // Check if all opening parentheses are matched
+    return stack.length === 0;
   };
 
 
@@ -115,7 +112,7 @@ function Calculator() {
           const operand1 = operandStack.pop();
           operandStack.push(applyOperation(operator, operand1, operand2));
         }
-        operatorStack.pop(); // Pop the opening parenthesis
+        operatorStack.pop();
       } else {
         while (
           operatorStack.length > 0 &&
@@ -140,8 +137,6 @@ function Calculator() {
     return operandStack[0];
   }
   
-  const result = calculateExpression("3 + 5 * (2 - 8)^2 / 4");
-  console.log(result); // Output: 48
 
   return (
     <div className='calculator'>
