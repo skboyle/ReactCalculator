@@ -141,19 +141,12 @@ function Calculator() {
   return (
     <div className='calculator'>
       <div className='calc-wrapper'>
-        <div className='ctc calc-screen'>
-          <div className='calc-answer'>
+        <div className='ctc calc-answer-screen'>
             <span>
-              {answer}
+              {error ? error : answer}
             </span>
           </div>
-          <div className='calc-error'>
-            <span>
-              {error}
-            </span>
-          </div>
-        </div>
-        <div className='ctc calc-compute'>
+        <div className='ctc calc-compute-screen'>
           <span>
             {equation ? equation : '0'}
           </span>
